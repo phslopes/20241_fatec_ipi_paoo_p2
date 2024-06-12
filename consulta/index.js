@@ -49,7 +49,7 @@ app.listen(
   PORT,
   async () => {
     console.log(`Consulta: ${PORT}`)
-    const eventos = await axios.get('http://localhost:10000/eventos')
+    const eventos = await axios.get(`http://localhost:10000/eventos`)
     eventos.data.forEach((valor, indice, colecao) => {
       // try{
       //   undefined()

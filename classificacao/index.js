@@ -19,6 +19,7 @@ const funcoes = {
         payload: observacao
       }
     )
+    console.log('classificado')
   }
 }
 
