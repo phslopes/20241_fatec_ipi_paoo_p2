@@ -33,7 +33,11 @@ app.post('/eventos', (req, res) => {
 //POST /lembretes {texto: "Fazer cafe"}
 app.post('/lembretes', async (req, res) => {
   const texto = req.body.texto
-  const lembrete = {id, texto}
+  const lembrete = {
+    id, 
+    texto,
+    status: 'aguardando'
+  }  
   lembretes[id] = lembrete
   id++
   //isso é a emissão de um evento

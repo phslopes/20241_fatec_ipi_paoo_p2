@@ -16,7 +16,7 @@ app.post('/eventos', async (req, res) => {
   console.log(evento)
 
   // Enviando o evento para os microsserviços interessados
-  if (evento.type === 'ObservacaoClassificada') {
+  if (evento.type === 'ObservacaoCriada'|| 'LembreteCriado') {
     try {
       await axios.post('http://localhost:4000/eventos', evento)//classificação
     }
@@ -28,7 +28,7 @@ app.post('/eventos', async (req, res) => {
     }
     catch (e) { }
   }
-  if (evento.type === 'ObservacaoCriada'){
+  if (evento.type === 'ObservacaoClassificada'){
     try {
       await axios.post('http://localhost:7000/eventos', evento)//observações
     }
